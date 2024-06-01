@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>body{
+        margin: 0%;
+        padding: 0%;
+        background-color: black;
+    
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+       
+        
+    }
+    .title{ 
+        color: white;
+        font-size: 5vw;
+        margin: 10px;
+        font-style: italic;
+        text-shadow: 0.5vw 0.5vw 10px white;
+        
+    
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .navbar a{
+        color: white;
+        font-size: 1.28vw;
+        margin: 20px;
+        border: 1px solid transparent;
+        padding: 1vw;
+        border-radius: 1.4vw;
+        background-color: red;
+        box-shadow: 0.5vw 0.5vw 25px white ;
+        animation-name:navbar_a ;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    
+    
+    .navbar a:hover{
+        background-color: white;
+        color: red;
+    }
+    
+    
+    .myself{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .myself span{
+        width: 50vw
+    }
+    .myself1
+    { 
+        border: transparent 2px solid;
+        margin-left: 10vw;
+        margin-top: 10vw; 
+        
+    }
+    .book {
+        position: relative;
+        border-radius: 10px;
+        width: 45vw;
+        height: 99vh;
+        background-color: grey;
+        -webkit-box-shadow: 1px 1px 12px #000;
+        box-shadow: 1px 1px 12px #000;
+        -webkit-transform: preserve-3d;
+        -ms-transform: preserve-3d;
+        transform: preserve-3d;
+        -webkit-perspective: 2000px;
+        perspective: 2000px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: #000;
+      }
+      
+      .cover {
+        top: 0;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform-origin: 0;
+        -ms-transform-origin: 0;
+        transform-origin: 0;
+        -webkit-box-shadow: 1px 1px 12px #000;
+        box-shadow: 1px 1px 12px #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      
+      .book:hover .cover {
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: rotatey(-80deg);
+        -ms-transform: rotatey(-80deg);
+        transform: rotatey(-80deg);
+      }
+      
+      
+      
+      .myself h2{
+        border: transparent 1px solid;
+        color: white;
+        font-size: 3vw;
+        text-shadow: 1vw 1vw 15px red;
+        font-style: italic;
+      }
+    .myself p{
+        color: white;
+        border: transparent solid 1px;
+        border-radius: 20px;
+        padding: 3vw;
+        background-color: transparent;
+        font-size: 1.5vw;
+    
+    }
+    
+    .myimage{
+        width: 30vw;
+        margin-left: 10vw;
+        margin-top: 10vh;
+        border-radius: 50%;
+        
+        position: relative;
+    }
+    .myimage:hover{
+        box-shadow: 2px 2px 20px white;
+    }
+    
+    
+    .myeducation{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.5vw;
+       margin-left: 6vw;
+    }
+    
+    
+    .myeducation h2{
+        font-size: 3.5vw;
+        text-shadow: 0.5vw 0.5vw 25px white;
+    }
+    .std10{
+        border: 2px transparent solid;
+        margin: 5vw;
+        padding: 5px;
+        width: 40vw;
+        margin-left: 8vw;
+    }
+    
+    .std12{
+        border: 2px transparent solid;
+        margin: 5vw;
+        padding: 5px;
+        width: 40vw;
+    }
+    
+    .card {
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+      }
+      
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.999s;
+      }
+      
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      
+      .card-front {
+        background-color:black;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: 10px solid black;
+        border-radius: 10px;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(0deg);
+      }
+      
+      .card-back {
+        background-color:black;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: 10px solid black;
+        border-radius: 10px;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(180deg);
+      }
+      
+    .myskills{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5vw;
+        margin-top: 10vh;
+       }
+    .myskills h3{
+        font-size: 3.5vw;
+        text-shadow: 0.5vw 0.5vw 25px white;
+    }
+    .myskills p{
+        font-size: 1.7vw;
+    }
+    .C_lang{
+        border: 2px transparent solid;
+        margin-top: 0px;
+        margin-left: 6vw;
+        padding: 5px;
+        width: 25vw;
+    }
+    .python{
+        border: 2px transparent solid;
+        margin-top: 0px;
+        margin-left: 5vw;
+        padding: 5px;
+        width: 25vw;
+    }
+    
+    .webdev{
+        border: 2px transparent solid;
+        margin-top: 0px;
+        margin-left: 5vw;
+        margin-right: 1vw;
+        padding: 5px;
+        width: 25vw;
+        
+    }
+    
+    
+    .card {
+        width: 25vw;
+        height: 254px;
+        background: black;
+        transition: all 0.4s;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+        font-size: 30px;
+        font-weight: 900;
+    
+      }
+      
+      .card:hover {
+        border-radius: 15px;
+        cursor: pointer;
+        transform: scale(1.2);
+        box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+        background: black;
+      }
+      
+      .first-content {
+        height: 100%;
+        width: 100%;
+        transition: all 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 15px;
+      }
+      
+      .card:hover .first-content {
+        height: 0px;
+        opacity: 0;
+      }
+      
+      .second-content {
+        height: 0%;
+        width: 100%;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: all 0.4s;
+        font-size: 0px;
+        transform: rotate(90deg) scale(-1);
+      }
+      
+      .card:hover .second-content {
+        opacity: 1;
+        height: 100%;
+        font-size: 1.8rem;
+        transform: rotate(0deg);
+      }
+      .mycontacts{
+        color: white;
+        border: transparent 2px solid;
+        margin-left: 9vw;
+        text-align: center;
+    }
+    .mycontacts h1{
+        font-size: 3.5vw;
+        text-shadow: 0.5vw 0.5vw 25px white;
+    }
+    .mycontacts h2{
+        font-size: 2vw;
+    }
+    .media_icons{
+        width: 7vw;
+        border-radius: 60px;
+        box-shadow: 2px 2px 20px white;
+        margin-right:15px ;
+    }
+      
+      
+      </style>
+  
+</head>
+<body>
+    <header>
+        <div>
+            <span class="title">
+               My Portfolio
+            </span>
+        </div>
+        <nav class="navbar">
+            <a href="#myself">My Self</a>
+            <a href="#myeducation">My Education</a>
+           <a href="#myskills">My skills</a>
+            <a href="#mycontacts">My Contacts</a>
+        </nav>
+    </header>
+    <div class="myself" id="myself">
+        <span class="myself1">
+            <div class="book">
+                <p>My name is Kumar Karthikk, and I hail from Srikakulam, a town in Andhra Pradesh. At 18 years old, I am currently embarking on my academic journey as a first-year undergraduate student at SRM University, where I am pursuing a Bachelor's degree in Electronics and Communication Engineering.<br><br>
+
+                    My educational foundation was laid at Sri Chaitanya School in my hometown for my 10th grade, followed by completing my 12th grade at Sri Chaitanya Secondary School in Vishakapatnam. These formative years instilled in me a strong academic discipline and a thirst for knowledge that has propelled me towards my current pursuit in the field of Electronics and Communication Engineering.<br><br>
+                    
+                    While my major revolves around sensor technology and electronics, my passion for problem-solving through programming has been a driving force behind my academic pursuits. I possess intermediate knowledge in programming languages such as C and Python, utilizing them to tackle challenges and create innovative solutions. Additionally, my skills extend to web development, particularly as a front-end developer proficient in HTML and CSS.</p>
+           
+                <div class="cover">
+                    <h2>MY  SELF  KUMAR KARTHIKK<br>A  FRONT-END  DEVELOPER</h2>
+                </div>
+               </div>
+
+               
+        </span>
+        <span><img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1712830815/my_image_opjgha.jpg" class="myimage"/></span>
+      </div> 
+    
+
+      <div class="myeducation" id="myeducation">
+        
+        <span class="std10">
+            <div class="card">
+                <div class="card-inner">
+                  <div class="card-front">
+                    <h2>secondary<br> education</h2>
+                  </div>
+                  <div class="card-back">
+                    <p>I completed my 6th to 10th grade education at Sri Chaitanya school in Srikakulam,Andhra Pradesh. I achieved outstanding results in my 10th-grade board exams, scoring 95%. My time at Sri Chaitanya school instilled in me a strong foundation for academic success and personal development.</p>
+                   
+                  </div>
+                </div>
+              </div> 
+           
+        </span>       
+       
+       <span class="std12">
+        <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h2> senior secondary education</h2>
+              </div>
+              <div class="card-back">
+                <p>I completed my 12th-grade education at Sri Chaitanya secondary school in Vishakapatnam,Andhra Pradesh. I excelled in my 12th-grade board exams, achieving 75%. This experience further solidified my academic prowess and commitment to excellence.</p>
+                
+              </div>
+            </div>
+          </div>
+                 
+       </span>
+   
+
+    
+      
+</div>
+      <div class="myskills" id="myskills">
+        
+        <span class="C_lang">
+            <div class="card">
+                <div class="first-content">
+                    <h3>C <br>language</h3>
+                </div>
+                <div class="second-content">
+                    <p> I developed intermediate problem-solving skills in C programming, advancing from basic to advanced levels during my education, enhancing technical abilities and analytical thinking.</p>
+                </div>
+            </div>  
+         
+        </span>
+        <span class="python">
+            <div class="card">
+                <div class="first-content">
+                    <h3>Python Programmig</h3>
+                </div>
+                <div class="second-content">
+                    <p> I developed intermediate problem-solving skills in python programming, advancing from basic to advanced levels during my education, enhancing technical abilities and analytical thinking.</p>
+                </div>
+            </div> 
+           
+        </span>
+        <span class="webdev">
+            <div class="card">
+                <div class="first-content">
+                    <h3>Web Development</h3>
+                </div>
+                <div class="second-content">
+                    <p>I showcase my proficiency in front-end web development through the creation of visually appealing and responsive websites using HTML and CSS. My experience reflects a strong foundation in design and user interface development</p>
+                    </div>
+            </div> 
+            
+        </span>
+ </div>
+
+ <div class="mycontacts" id="mycontacts">
+    <span>
+        <h1>My Contacts</h1>
+        <h2>Kumar Karthikk</h2>
+        <h2>burlekumarkarthikk@gmail.com</h2>
+        <h2>+91 7207256386</h2>
+    </span>
+    <div class="socialmedia">
+        <a href="https://www.instagram.com/karthikk_krazy?igsh=MXU2YnV2cjljdjVhZA==" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOUtCH7czvE9OkhcLstZ6tvSDGgzAqVRjjg&s"  class="media_icons">
+        
+        </a>
+
+        <a href="http://www.linkedin.com/in/kumar-karthikk-922b442a8" target="_blank">
+        <img src="data:image/png;base64,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" class="media_icons">
+        </a>
+
+        <a href="https://github.com/kumarkarthikk" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5uiTrMN6hkPJXjo9ORvb1okQJliE_eb3rmg&s" class="media_icons">
+
+        </a>
+    </div>
+
+</div>
+
+
+    
+       
+   
+    
+</body>
+</html>
